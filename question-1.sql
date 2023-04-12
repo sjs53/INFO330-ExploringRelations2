@@ -1,1 +1,2 @@
 -- Show the customer's full name, Invoice ID, Date of the invoice and billing country of customers who are from Brazil.
+SELECT customers.firstName, customers.lastName, invoices.InvoiceID, invoices.InvoiceDate, invoices.BillingCountry FROM customers JOIN invoices ON customers.customerId = invoices.customerId WHERE customers.country = 'Brazil';
